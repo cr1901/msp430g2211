@@ -1,0 +1,22 @@
+[package]
+name = "msp430g2211"
+version = "0.1.0"
+authors = [
+    "William D. Jones <thor0505@comcast.net>",
+    "Vadzim Dambrouski <pftbest@gmail.com>",
+    "Jorge Aparicio <jorge@japaric.io>"
+]
+description = "Peripheral access API for MSP430G2211 microcontroller"
+documentation = "https://docs.rs/msp430g2211"
+keywords = ["no-std", "msp430", "ti", "launchpad"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/cr1901/msp430g2211"
+
+[dependencies]
+bare-metal = "0.1.0"
+msp430 = { git = "https://github.com/pftbest/msp430" }
+msp430-rt = { git = "https://github.com/pftbest/msp430-rt" }
+vcell = "0.1.0"
+
+[features]
+rt = []
