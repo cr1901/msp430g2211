@@ -1,6 +1,6 @@
 [package]
 name = "msp430g2211"
-version = "0.1.0"
+version = "0.2.0"
 authors = [
     "William D. Jones <thor0505@comcast.net>",
     "Vadzim Dambrouski <pftbest@gmail.com>",
@@ -15,8 +15,11 @@ repository = "https://github.com/cr1901/msp430g2211"
 [dependencies]
 bare-metal = "0.1.0"
 msp430 = "0.1.0"
-msp430-rt = "0.1.0"
 vcell = "0.1.0"
+
+[dependencies.msp430-rt]
+git = "https://github.com/cr1901/msp430-rt"
+branch = "termination"
 
 [features]
 rt = []
