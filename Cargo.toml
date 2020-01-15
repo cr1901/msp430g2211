@@ -1,6 +1,6 @@
 [package]
 name = "msp430g2211"
-version = "0.1.4"
+version = "0.2.0"
 authors = [
     "William D. Jones <thor0505@comcast.net>",
     "Vadzim Dambrouski <pftbest@gmail.com>",
@@ -13,10 +13,13 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/cr1901/msp430g2211"
 
 [dependencies]
-bare-metal = "0.1.0"
-msp430 = "0.1.0"
-msp430-rt = "0.1.3"
+bare-metal = "0.2.0"
+msp430 = "0.2.0"
 vcell = "0.1.0"
 
+[dependencies.msp430-rt]
+optional = true
+version = "0.2.0"
+
 [features]
-rt = []
+rt = ["msp430-rt/device"]

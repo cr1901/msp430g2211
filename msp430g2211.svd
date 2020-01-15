@@ -6,7 +6,7 @@
   <access>read-write</access>
   <peripherals>
     <peripheral>
-      <name>Special_Function</name>
+      <name>SPECIAL_FUNCTION</name>
       <description>Special Function</description>
       <baseAddress>0</baseAddress>
       <registers>
@@ -94,236 +94,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>Comparator_A</name>
-      <description>Comparator A</description>
-      <baseAddress>88</baseAddress>
-      <registers>
-        <register>
-          <name>CACTL1</name>
-          <description>Comparator A Control 1</description>
-          <addressOffset>1</addressOffset>
-          <size>8</size>
-          <resetMask>255</resetMask>
-          <fields>
-            <field>
-              <name>CAIFG</name>
-              <description>Comp. A Interrupt Flag</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAIE</name>
-              <description>Comp. A Interrupt Enable</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAIES</name>
-              <description>Comp. A Int. Edge Select: 0:rising / 1:falling</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAON</name>
-              <description>Comp. A enable</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAREF</name>
-              <description>Comp. A Internal Reference Select 0</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CAREF_0</name>
-                  <description>Comp. A Int. Ref. Select 0 : Off</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CAREF_1</name>
-                  <description>Comp. A Int. Ref. Select 1 : 0.25*Vcc</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CAREF_2</name>
-                  <description>Comp. A Int. Ref. Select 2 : 0.5*Vcc</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CAREF_3</name>
-                  <description>Comp. A Int. Ref. Select 3 : Vt</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CARSEL</name>
-              <description>Comp. A Internal Reference Enable</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAEX</name>
-              <description>Comp. A Exchange Inputs</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CACTL2</name>
-          <description>Comparator A Control 2</description>
-          <addressOffset>2</addressOffset>
-          <size>8</size>
-          <resetMask>255</resetMask>
-          <fields>
-            <field>
-              <name>CAOUT</name>
-              <description>Comp. A Output</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAF</name>
-              <description>Comp. A Enable Output Filter</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>P2CA0</name>
-              <description>Comp. A +Terminal Multiplexer</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>P2CA1</name>
-              <description>Comp. A -Terminal Multiplexer</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>P2CA2</name>
-              <description>Comp. A -Terminal Multiplexer</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>P2CA3</name>
-              <description>Comp. A -Terminal Multiplexer</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>P2CA4</name>
-              <description>Comp. A +Terminal Multiplexer</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CASHORT</name>
-              <description>Comp. A Short + and - Terminals</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
-        </register>
-        <register>
-          <name>CAPD</name>
-          <description>Comparator A Port Disable</description>
-          <addressOffset>3</addressOffset>
-          <size>8</size>
-          <resetMask>255</resetMask>
-          <fields>
-            <field>
-              <name>CAPD0</name>
-              <description>Comp. A Disable Input Buffer of Port Register .0</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAPD1</name>
-              <description>Comp. A Disable Input Buffer of Port Register .1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAPD2</name>
-              <description>Comp. A Disable Input Buffer of Port Register .2</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAPD3</name>
-              <description>Comp. A Disable Input Buffer of Port Register .3</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAPD4</name>
-              <description>Comp. A Disable Input Buffer of Port Register .4</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAPD5</name>
-              <description>Comp. A Disable Input Buffer of Port Register .5</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAPD6</name>
-              <description>Comp. A Disable Input Buffer of Port Register .6</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CAPD7</name>
-              <description>Comp. A Disable Input Buffer of Port Register .7</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>Port_1_2</name>
+      <name>PORT_1_2</name>
       <description>Port 1/2</description>
       <baseAddress>32</baseAddress>
       <registers>
@@ -1466,268 +1237,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>Flash</name>
-      <description>Flash</description>
-      <baseAddress>296</baseAddress>
-      <registers>
-        <register>
-          <name>FCTL1</name>
-          <description>FLASH Control 1</description>
-          <addressOffset>0</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <fields>
-            <field>
-              <name>ERASE</name>
-              <description>Enable bit for Flash segment erase</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MERAS</name>
-              <description>Enable bit for Flash mass erase</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>WRT</name>
-              <description>Enable bit for Flash write</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BLKWRT</name>
-              <description>Enable bit for Flash segment write</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>FCTL2</name>
-          <description>FLASH Control 2</description>
-          <addressOffset>2</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <fields>
-            <field>
-              <name>FN0</name>
-              <description>Divide Flash clock by 1 to 64 using FN0 to FN5 according to:</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FN1</name>
-              <description>32*FN5 + 16*FN4 + 8*FN3 + 4*FN2 + 2*FN1 + FN0 + 1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FN2</name>
-              <description>FN2</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FN3</name>
-              <description>FN3</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FN4</name>
-              <description>FN4</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FN5</name>
-              <description>FN5</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FSSEL</name>
-              <description>Flash clock select 0 */        /* to distinguish from USART SSELx</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>FSSEL_0</name>
-                  <description>Flash clock select: 0 - ACLK</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FSSEL_1</name>
-                  <description>Flash clock select: 1 - MCLK</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FSSEL_2</name>
-                  <description>Flash clock select: 2 - SMCLK</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FSSEL_3</name>
-                  <description>Flash clock select: 3 - SMCLK</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>FCTL3</name>
-          <description>FLASH Control 3</description>
-          <addressOffset>4</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <fields>
-            <field>
-              <name>BUSY</name>
-              <description>Flash busy: 1</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>KEYV</name>
-              <description>Flash Key violation flag</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ACCVIFG</name>
-              <description>Flash Access violation flag</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>WAIT</name>
-              <description>Wait flag for segment write</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LOCK</name>
-              <description>Lock bit: 1 - Flash is locked (read only)</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>EMEX</name>
-              <description>Flash Emergency Exit</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LOCKA</name>
-              <description>Segment A Lock bit: read = 1 - Segment is locked (read only)</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FAIL</name>
-              <description>Last Program or Erase failed</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>Watchdog_Timer</name>
-      <description>Watchdog Timer</description>
-      <baseAddress>288</baseAddress>
-      <registers>
-        <register>
-          <name>WDTCTL</name>
-          <description>Watchdog Timer Control</description>
-          <addressOffset>0</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <fields>
-            <field>
-              <name>WDTIS0</name>
-              <description>WDTIS0</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>WDTIS1</name>
-              <description>WDTIS1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>WDTSSEL</name>
-              <description>WDTSSEL</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>WDTCNTCL</name>
-              <description>WDTCNTCL</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>WDTTMSEL</name>
-              <description>WDTTMSEL</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>WDTNMI</name>
-              <description>WDTNMI</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>WDTNMIES</name>
-              <description>WDTNMIES</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>WDTHOLD</name>
-              <description>WDTHOLD</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>System_Clock</name>
+      <name>SYSTEM_CLOCK</name>
       <description>System Clock</description>
       <baseAddress>82</baseAddress>
       <registers>
@@ -2098,7 +1608,518 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>Timer_A2</name>
+      <name>COMPARATOR_A</name>
+      <description>Comparator A</description>
+      <baseAddress>88</baseAddress>
+      <registers>
+        <register>
+          <name>CACTL1</name>
+          <description>Comparator A Control 1</description>
+          <addressOffset>1</addressOffset>
+          <size>8</size>
+          <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>CAIFG</name>
+              <description>Comp. A Interrupt Flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAIE</name>
+              <description>Comp. A Interrupt Enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAIES</name>
+              <description>Comp. A Int. Edge Select: 0:rising / 1:falling</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAON</name>
+              <description>Comp. A enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAREF</name>
+              <description>Comp. A Internal Reference Select 0</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>CAREF_0</name>
+                  <description>Comp. A Int. Ref. Select 0 : Off</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CAREF_1</name>
+                  <description>Comp. A Int. Ref. Select 1 : 0.25*Vcc</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CAREF_2</name>
+                  <description>Comp. A Int. Ref. Select 2 : 0.5*Vcc</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CAREF_3</name>
+                  <description>Comp. A Int. Ref. Select 3 : Vt</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CARSEL</name>
+              <description>Comp. A Internal Reference Enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAEX</name>
+              <description>Comp. A Exchange Inputs</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CACTL2</name>
+          <description>Comparator A Control 2</description>
+          <addressOffset>2</addressOffset>
+          <size>8</size>
+          <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>CAOUT</name>
+              <description>Comp. A Output</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAF</name>
+              <description>Comp. A Enable Output Filter</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>P2CA0</name>
+              <description>Comp. A +Terminal Multiplexer</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>P2CA1</name>
+              <description>Comp. A -Terminal Multiplexer</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>P2CA2</name>
+              <description>Comp. A -Terminal Multiplexer</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>P2CA3</name>
+              <description>Comp. A -Terminal Multiplexer</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>P2CA4</name>
+              <description>Comp. A +Terminal Multiplexer</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CASHORT</name>
+              <description>Comp. A Short + and - Terminals</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+        <register>
+          <name>CAPD</name>
+          <description>Comparator A Port Disable</description>
+          <addressOffset>3</addressOffset>
+          <size>8</size>
+          <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>CAPD0</name>
+              <description>Comp. A Disable Input Buffer of Port Register .0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPD1</name>
+              <description>Comp. A Disable Input Buffer of Port Register .1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPD2</name>
+              <description>Comp. A Disable Input Buffer of Port Register .2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPD3</name>
+              <description>Comp. A Disable Input Buffer of Port Register .3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPD4</name>
+              <description>Comp. A Disable Input Buffer of Port Register .4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPD5</name>
+              <description>Comp. A Disable Input Buffer of Port Register .5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPD6</name>
+              <description>Comp. A Disable Input Buffer of Port Register .6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPD7</name>
+              <description>Comp. A Disable Input Buffer of Port Register .7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>CALIBRATION_DATA</name>
+      <description>Calibration Data</description>
+      <baseAddress>4350</baseAddress>
+      <registers>
+        <register>
+          <name>CALDCO_1MHZ</name>
+          <description>DCOCTL  Calibration Data for 1MHz</description>
+          <addressOffset>0</addressOffset>
+          <size>8</size>
+          <resetMask>255</resetMask>
+        </register>
+        <register>
+          <name>CALBC1_1MHZ</name>
+          <description>BCSCTL1 Calibration Data for 1MHz</description>
+          <addressOffset>1</addressOffset>
+          <size>8</size>
+          <resetMask>255</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>WATCHDOG_TIMER</name>
+      <description>Watchdog Timer</description>
+      <baseAddress>288</baseAddress>
+      <registers>
+        <register>
+          <name>WDTCTL</name>
+          <description>Watchdog Timer Control</description>
+          <addressOffset>0</addressOffset>
+          <size>16</size>
+          <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>WDTIS0</name>
+              <description>WDTIS0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WDTIS1</name>
+              <description>WDTIS1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WDTSSEL</name>
+              <description>WDTSSEL</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WDTCNTCL</name>
+              <description>WDTCNTCL</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WDTTMSEL</name>
+              <description>WDTTMSEL</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WDTNMI</name>
+              <description>WDTNMI</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WDTNMIES</name>
+              <description>WDTNMIES</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WDTHOLD</name>
+              <description>WDTHOLD</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>FLASH</name>
+      <description>Flash</description>
+      <baseAddress>296</baseAddress>
+      <registers>
+        <register>
+          <name>FCTL1</name>
+          <description>FLASH Control 1</description>
+          <addressOffset>0</addressOffset>
+          <size>16</size>
+          <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>ERASE</name>
+              <description>Enable bit for Flash segment erase</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MERAS</name>
+              <description>Enable bit for Flash mass erase</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WRT</name>
+              <description>Enable bit for Flash write</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BLKWRT</name>
+              <description>Enable bit for Flash segment write</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FCTL2</name>
+          <description>FLASH Control 2</description>
+          <addressOffset>2</addressOffset>
+          <size>16</size>
+          <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>FN0</name>
+              <description>Divide Flash clock by 1 to 64 using FN0 to FN5 according to:</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FN1</name>
+              <description>32*FN5 + 16*FN4 + 8*FN3 + 4*FN2 + 2*FN1 + FN0 + 1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FN2</name>
+              <description>FN2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FN3</name>
+              <description>FN3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FN4</name>
+              <description>FN4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FN5</name>
+              <description>FN5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FSSEL</name>
+              <description>Flash clock select 0 */        /* to distinguish from USART SSELx</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>FSSEL_0</name>
+                  <description>Flash clock select: 0 - ACLK</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>FSSEL_1</name>
+                  <description>Flash clock select: 1 - MCLK</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>FSSEL_2</name>
+                  <description>Flash clock select: 2 - SMCLK</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>FSSEL_3</name>
+                  <description>Flash clock select: 3 - SMCLK</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FCTL3</name>
+          <description>FLASH Control 3</description>
+          <addressOffset>4</addressOffset>
+          <size>16</size>
+          <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>BUSY</name>
+              <description>Flash busy: 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEYV</name>
+              <description>Flash Key violation flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ACCVIFG</name>
+              <description>Flash Access violation flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAIT</name>
+              <description>Wait flag for segment write</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LOCK</name>
+              <description>Lock bit: 1 - Flash is locked (read only)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EMEX</name>
+              <description>Flash Emergency Exit</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LOCKA</name>
+              <description>Segment A Lock bit: read = 1 - Segment is locked (read only)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FAIL</name>
+              <description>Last Program or Erase failed</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>TIMER_A2</name>
       <description>Timer A2</description>
       <baseAddress>302</baseAddress>
       <registers>
@@ -2590,27 +2611,6 @@
           <addressOffset>70</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>Calibration_Data</name>
-      <description>Calibration Data</description>
-      <baseAddress>4350</baseAddress>
-      <registers>
-        <register>
-          <name>CALDCO_1MHZ</name>
-          <description>DCOCTL  Calibration Data for 1MHz</description>
-          <addressOffset>0</addressOffset>
-          <size>8</size>
-          <resetMask>255</resetMask>
-        </register>
-        <register>
-          <name>CALBC1_1MHZ</name>
-          <description>BCSCTL1 Calibration Data for 1MHz</description>
-          <addressOffset>1</addressOffset>
-          <size>8</size>
-          <resetMask>255</resetMask>
         </register>
       </registers>
     </peripheral>
