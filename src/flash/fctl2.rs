@@ -247,6 +247,86 @@ impl<'a> FSSEL_W<'a> {
         self.w
     }
 }
+#[doc = "FCTL2 Password\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum FWKEY_A {
+    #[doc = "150: Value always read from the FCTL2 Password register"]
+    PASSWORD = 150,
+}
+impl From<FWKEY_A> for u8 {
+    #[inline(always)]
+    fn from(variant: FWKEY_A) -> Self {
+        variant as _
+    }
+}
+#[doc = "Reader of field `FWKEY`"]
+pub type FWKEY_R = crate::R<u8, FWKEY_A>;
+impl FWKEY_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, FWKEY_A> {
+        use crate::Variant::*;
+        match self.bits {
+            150 => Val(FWKEY_A::PASSWORD),
+            i => Res(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `PASSWORD`"]
+    #[inline(always)]
+    pub fn is_password(&self) -> bool {
+        *self == FWKEY_A::PASSWORD
+    }
+}
+#[doc = "FCTL2 Password\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum FWKEY_AW {
+    #[doc = "165: Value which must be written to the FCTL2 Password register"]
+    PASSWORD = 165,
+}
+impl From<FWKEY_AW> for u8 {
+    #[inline(always)]
+    fn from(variant: FWKEY_AW) -> Self {
+        variant as _
+    }
+}
+#[doc = "Write proxy for field `FWKEY`"]
+pub struct FWKEY_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> FWKEY_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: FWKEY_AW) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
+    }
+    #[doc = "Value which must be written to the FCTL2 Password register"]
+    #[inline(always)]
+    pub fn password(self) -> &'a mut W {
+        self.variant(FWKEY_AW::PASSWORD)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u16) & 0xff) << 8);
+        self.w
+    }
+}
+#[doc = "Reader of field `FN`"]
+pub type FN_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `FN`"]
+pub struct FN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> FN_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x3f) | ((value as u16) & 0x3f);
+        self.w
+    }
+}
 impl R {
     #[doc = "Bit 0 - Divide Flash clock by 1 to 64 using FN0 to FN5 according to:"]
     #[inline(always)]
@@ -282,6 +362,16 @@ impl R {
     #[inline(always)]
     pub fn fssel(&self) -> FSSEL_R {
         FSSEL_R::new(((self.bits >> 6) & 0x03) as u8)
+    }
+    #[doc = "Bits 8:15 - FCTL2 Password"]
+    #[inline(always)]
+    pub fn fwkey(&self) -> FWKEY_R {
+        FWKEY_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 0:5 - Flash Controller Clock Divider"]
+    #[inline(always)]
+    pub fn fn_(&self) -> FN_R {
+        FN_R::new((self.bits & 0x3f) as u8)
     }
 }
 impl W {
@@ -319,5 +409,15 @@ impl W {
     #[inline(always)]
     pub fn fssel(&mut self) -> FSSEL_W {
         FSSEL_W { w: self }
+    }
+    #[doc = "Bits 8:15 - FCTL2 Password"]
+    #[inline(always)]
+    pub fn fwkey(&mut self) -> FWKEY_W {
+        FWKEY_W { w: self }
+    }
+    #[doc = "Bits 0:5 - Flash Controller Clock Divider"]
+    #[inline(always)]
+    pub fn fn_(&mut self) -> FN_W {
+        FN_W { w: self }
     }
 }

@@ -1,6 +1,6 @@
 [package]
 name = "msp430g2211"
-version = "0.2.0"
+version = "0.2.1"
 authors = [
     "William D. Jones <thor0505@comcast.net>",
     "Vadzim Dambrouski <pftbest@gmail.com>",

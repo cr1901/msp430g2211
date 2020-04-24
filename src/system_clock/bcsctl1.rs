@@ -247,6 +247,34 @@ impl<'a> XT2OFF_W<'a> {
         self.w
     }
 }
+#[doc = "Reader of field `BCSCTL1`"]
+pub type BCSCTL1_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `BCSCTL1`"]
+pub struct BCSCTL1_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> BCSCTL1_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0xff) | ((value as u8) & 0xff);
+        self.w
+    }
+}
+#[doc = "Reader of field `RSEL`"]
+pub type RSEL_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `RSEL`"]
+pub struct RSEL_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> RSEL_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x0f) | ((value as u8) & 0x0f);
+        self.w
+    }
+}
 impl R {
     #[doc = "Bit 0 - Range Select Bit 0"]
     #[inline(always)]
@@ -282,6 +310,16 @@ impl R {
     #[inline(always)]
     pub fn xt2off(&self) -> XT2OFF_R {
         XT2OFF_R::new(((self.bits >> 7) & 0x01) != 0)
+    }
+    #[doc = "Bits 0:7 - Basic Clock System Control 1 register"]
+    #[inline(always)]
+    pub fn bcsctl1(&self) -> BCSCTL1_R {
+        BCSCTL1_R::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 0:3 - Range Select"]
+    #[inline(always)]
+    pub fn rsel(&self) -> RSEL_R {
+        RSEL_R::new((self.bits & 0x0f) as u8)
     }
 }
 impl W {
@@ -319,5 +357,15 @@ impl W {
     #[inline(always)]
     pub fn xt2off(&mut self) -> XT2OFF_W {
         XT2OFF_W { w: self }
+    }
+    #[doc = "Bits 0:7 - Basic Clock System Control 1 register"]
+    #[inline(always)]
+    pub fn bcsctl1(&mut self) -> BCSCTL1_W {
+        BCSCTL1_W { w: self }
+    }
+    #[doc = "Bits 0:3 - Range Select"]
+    #[inline(always)]
+    pub fn rsel(&mut self) -> RSEL_W {
+        RSEL_W { w: self }
     }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <device>
   <name>MSP430G2211</name>
   <size>2</size>
@@ -161,6 +161,18 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>P1IN</name>
+              <description>Port 1 Input register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -231,6 +243,18 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>P1OUT</name>
+              <description>Port 1 Output register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
           <writeConstraint>
@@ -303,6 +327,18 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>P1DIR</name>
+              <description>Port 1 Direction register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -373,6 +409,18 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>P1IFG</name>
+              <description>Port 1 Interrupt Flag register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
           <writeConstraint>
@@ -445,6 +493,18 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>P1IES</name>
+              <description>Port 1 Interrupt Edge Select register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -515,6 +575,18 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>P1IE</name>
+              <description>Port 1 Interrupt Enable register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
           <writeConstraint>
@@ -587,6 +659,18 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>P1SEL</name>
+              <description>Port 1 Selection register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -657,6 +741,18 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>P1REN</name>
+              <description>Port 1 Resistor Enable register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
           <writeConstraint>
@@ -729,6 +825,18 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>P2IN</name>
+              <description>Port 2 Input register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -799,6 +907,18 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>P2OUT</name>
+              <description>Port 2 Output register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
           <writeConstraint>
@@ -871,6 +991,18 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>P2DIR</name>
+              <description>Port 2 Direction register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -941,6 +1073,18 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>P2IFG</name>
+              <description>Port 2 Interrupt Flag register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
           <writeConstraint>
@@ -1013,6 +1157,18 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>P2IES</name>
+              <description>Port 2 Interrupt Edge Select register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -1083,6 +1239,18 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>P2IE</name>
+              <description>Port 2 Interrupt Enable register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
           <writeConstraint>
@@ -1155,6 +1323,18 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>P2SEL</name>
+              <description>Port 2 Selection register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -1225,6 +1405,18 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>P2REN</name>
+              <description>Port 2 Resistor Enable register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
           <writeConstraint>
@@ -1414,6 +1606,42 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>DCOCTL</name>
+              <description>DCO Clock Frequency Control register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+            <field>
+              <name>DCO</name>
+              <description>DCO Frequency Select</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+            <field>
+              <name>MOD</name>
+              <description>Modulator Selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>31</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -1499,6 +1727,30 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>BCSCTL1</name>
+              <description>Basic Clock System Control 1 register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+            <field>
+              <name>RSEL</name>
+              <description>Range Select</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -1755,6 +2007,18 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>P2CA</name>
+              <description>Comparator A +/-Terminal Multiplexer register</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>5</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>31</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -1826,6 +2090,18 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>CAPD</name>
+              <description>Comparator A Port Disable register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
           <writeConstraint>
             <range>
@@ -1843,6 +2119,14 @@
       <registers>
         <register>
           <name>CALDCO_1MHZ</name>
+          <fields>
+            <field>
+              <name>CALDCO_1MHZ</name>
+              <description>DCOCTL  Calibration Data register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
           <description>DCOCTL  Calibration Data for 1MHz</description>
           <addressOffset>0</addressOffset>
           <size>8</size>
@@ -1850,6 +2134,14 @@
         </register>
         <register>
           <name>CALBC1_1MHZ</name>
+          <fields>
+            <field>
+              <name>CALBC1_1MHZ</name>
+              <description>BCSCTL1 Calibration Data register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
           <description>BCSCTL1 Calibration Data for 1MHz</description>
           <addressOffset>1</addressOffset>
           <size>8</size>
@@ -1925,6 +2217,30 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>WDTPW</name>
+              <description>Watchdog Timer Password</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <enumeratedValues>
+                <name>WDTPWR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>PASSWORD</name>
+                  <description>Value always read from the Watchdog Password register</description>
+                  <value>105</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>WDTPWW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>PASSWORD</name>
+                  <description>Value which must be written to the Watchdog Password register</description>
+                  <value>90</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
           </fields>
         </register>
       </registers>
@@ -1968,6 +2284,30 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>FWKEY</name>
+              <description>FCTL1 Password</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <enumeratedValues>
+                <name>FWKEYR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>PASSWORD</name>
+                  <description>Value always read from the FCTL1 Password register</description>
+                  <value>150</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>FWKEYW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>PASSWORD</name>
+                  <description>Value which must be written to the FCTL1 Password register</description>
+                  <value>165</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -2049,6 +2389,42 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
+            <field>
+              <name>FWKEY</name>
+              <description>FCTL2 Password</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <enumeratedValues>
+                <name>FWKEYR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>PASSWORD</name>
+                  <description>Value always read from the FCTL2 Password register</description>
+                  <value>150</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>FWKEYW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>PASSWORD</name>
+                  <description>Value which must be written to the FCTL2 Password register</description>
+                  <value>165</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FN</name>
+              <description>Flash Controller Clock Divider</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>63</maximum>
+                </range>
+              </writeConstraint>
+            </field>
           </fields>
         </register>
         <register>
@@ -2114,6 +2490,30 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>FWKEY</name>
+              <description>FCTL3 Password</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <enumeratedValues>
+                <name>FWKEYR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>PASSWORD</name>
+                  <description>Value always read from the FCTL3 Password register</description>
+                  <value>150</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>FWKEYW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>PASSWORD</name>
+                  <description>Value which must be written to the FCTL3 Password register</description>
+                  <value>165</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
           </fields>
         </register>
       </registers>
@@ -2123,13 +2523,6 @@
       <description>Timer A2</description>
       <baseAddress>302</baseAddress>
       <registers>
-        <register>
-          <name>TAIV</name>
-          <description>Timer A Interrupt Vector Word</description>
-          <addressOffset>0</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-        </register>
         <register>
           <name>TACTL</name>
           <description>Timer A Control</description>
@@ -2592,7 +2985,58 @@
           </fields>
         </register>
         <register>
+          <name>TAIV</name>
+          <fields>
+            <field>
+              <name>TAIV</name>
+              <description>Timer A Interrupt Vector value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>TAIV</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NONE</name>
+                  <description>No interrupt pending</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TACCR1</name>
+                  <description>Capture/Compare 1</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TAIFG</name>
+                  <description>Timer overflow</description>
+                  <value>10</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+          <description>Timer A Interrupt Vector Word</description>
+          <addressOffset>0</addressOffset>
+          <size>16</size>
+          <resetMask>65535</resetMask>
+          <NONE>[0, 'No interrupt pending']</NONE>
+          <TACCR1>[2, 'Capture/Compare 1']</TACCR1>
+          <TAIFG>[10, 'Timer overflow']</TAIFG>
+        </register>
+        <register>
           <name>TAR</name>
+          <fields>
+            <field>
+              <name>TAR</name>
+              <description>Timer A Counter Register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
           <description>Timer A Counter Register</description>
           <addressOffset>66</addressOffset>
           <size>16</size>
@@ -2600,6 +3044,20 @@
         </register>
         <register>
           <name>TACCR0</name>
+          <fields>
+            <field>
+              <name>TACCR0</name>
+              <description>Timer A Capture/Compare register 0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
           <description>Timer A Capture/Compare 0</description>
           <addressOffset>68</addressOffset>
           <size>16</size>
@@ -2607,6 +3065,20 @@
         </register>
         <register>
           <name>TACCR1</name>
+          <fields>
+            <field>
+              <name>TACCR1</name>
+              <description>Timer A Capture/Compare register 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
           <description>Timer A Capture/Compare 1</description>
           <addressOffset>70</addressOffset>
           <size>16</size>

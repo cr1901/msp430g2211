@@ -202,6 +202,20 @@ impl<'a> CASHORT_W<'a> {
         self.w
     }
 }
+#[doc = "Reader of field `P2CA`"]
+pub type P2CA_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `P2CA`"]
+pub struct P2CA_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> P2CA_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x1f << 2)) | (((value as u8) & 0x1f) << 2);
+        self.w
+    }
+}
 impl R {
     #[doc = "Bit 0 - Comp. A Output"]
     #[inline(always)]
@@ -242,6 +256,11 @@ impl R {
     #[inline(always)]
     pub fn cashort(&self) -> CASHORT_R {
         CASHORT_R::new(((self.bits >> 7) & 0x01) != 0)
+    }
+    #[doc = "Bits 2:6 - Comparator A +/-Terminal Multiplexer register"]
+    #[inline(always)]
+    pub fn p2ca(&self) -> P2CA_R {
+        P2CA_R::new(((self.bits >> 2) & 0x1f) as u8)
     }
 }
 impl W {
@@ -284,5 +303,10 @@ impl W {
     #[inline(always)]
     pub fn cashort(&mut self) -> CASHORT_W {
         CASHORT_W { w: self }
+    }
+    #[doc = "Bits 2:6 - Comparator A +/-Terminal Multiplexer register"]
+    #[inline(always)]
+    pub fn p2ca(&mut self) -> P2CA_W {
+        P2CA_W { w: self }
     }
 }

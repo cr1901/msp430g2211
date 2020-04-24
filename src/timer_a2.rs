@@ -18,17 +18,6 @@ pub struct RegisterBlock {
     #[doc = "0x46 - Timer A Capture/Compare 1"]
     pub taccr1: TACCR1,
 }
-#[doc = "Timer A Interrupt Vector Word\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [taiv](taiv) module"]
-pub type TAIV = crate::Reg<u16, _TAIV>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _TAIV;
-#[doc = "`read()` method returns [taiv::R](taiv::R) reader structure"]
-impl crate::Readable for TAIV {}
-#[doc = "`write(|w| ..)` method takes [taiv::W](taiv::W) writer structure"]
-impl crate::Writable for TAIV {}
-#[doc = "Timer A Interrupt Vector Word"]
-pub mod taiv;
 #[doc = "Timer A Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tactl](tactl) module"]
 pub type TACTL = crate::Reg<u16, _TACTL>;
 #[allow(missing_docs)]
@@ -62,6 +51,17 @@ impl crate::Readable for TACCTL1 {}
 impl crate::Writable for TACCTL1 {}
 #[doc = "Timer A Capture/Compare Control 1"]
 pub mod tacctl1;
+#[doc = "Timer A Interrupt Vector Word\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [taiv](taiv) module"]
+pub type TAIV = crate::Reg<u16, _TAIV>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _TAIV;
+#[doc = "`read()` method returns [taiv::R](taiv::R) reader structure"]
+impl crate::Readable for TAIV {}
+#[doc = "`write(|w| ..)` method takes [taiv::W](taiv::W) writer structure"]
+impl crate::Writable for TAIV {}
+#[doc = "Timer A Interrupt Vector Word"]
+pub mod taiv;
 #[doc = "Timer A Counter Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tar](tar) module"]
 pub type TAR = crate::Reg<u16, _TAR>;
 #[allow(missing_docs)]
