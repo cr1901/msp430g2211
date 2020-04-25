@@ -3126,4 +3126,10 @@
       </interrupt>
     </peripheral>
   </peripherals>
+  <vendorExtensions>
+    <msp430_svd>
+      <version>0.2.0</version>
+      <commit_hash>b89c4f6</commit_hash>
+    </msp430_svd>
+  </vendorExtensions>
 </device>
