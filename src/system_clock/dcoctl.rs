@@ -1,210 +1,52 @@
-#[doc = "Reader of register DCOCTL"]
-pub type R = crate::R<u8, super::DCOCTL>;
-#[doc = "Writer for register DCOCTL"]
-pub type W = crate::W<u8, super::DCOCTL>;
-#[doc = "Register DCOCTL `reset()`'s with value 0"]
-impl crate::ResetValue for super::DCOCTL {
-    type Type = u8;
+#[doc = "Register `DCOCTL` reader"]
+pub struct R(crate::R<DCOCTL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<DCOCTL_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `MOD0`"]
-pub type MOD0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `MOD0`"]
-pub struct MOD0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MOD0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u8) & 0x01);
-        self.w
+impl core::convert::From<crate::R<DCOCTL_SPEC>> for R {
+    fn from(reader: crate::R<DCOCTL_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `MOD1`"]
-pub type MOD1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `MOD1`"]
-pub struct MOD1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MOD1_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `DCOCTL` writer"]
+pub struct W(crate::W<DCOCTL_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<DCOCTL_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u8) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `MOD2`"]
-pub type MOD2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `MOD2`"]
-pub struct MOD2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MOD2_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u8) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `MOD3`"]
-pub type MOD3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `MOD3`"]
-pub struct MOD3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MOD3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u8) & 0x01) << 3);
-        self.w
+impl core::convert::From<crate::W<DCOCTL_SPEC>> for W {
+    fn from(writer: crate::W<DCOCTL_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `MOD4`"]
-pub type MOD4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `MOD4`"]
-pub struct MOD4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MOD4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u8) & 0x01) << 4);
-        self.w
+#[doc = "Field `DCOCTL` reader - DCO Clock Frequency Control register"]
+pub struct DCOCTL_R(crate::FieldReader<u8, u8>);
+impl DCOCTL_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        DCOCTL_R(crate::FieldReader::new(bits))
     }
 }
-#[doc = "Reader of field `DCO0`"]
-pub type DCO0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DCO0`"]
-pub struct DCO0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCO0_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::Deref for DCOCTL_R {
+    type Target = crate::FieldReader<u8, u8>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u8) & 0x01) << 5);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `DCO1`"]
-pub type DCO1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DCO1`"]
-pub struct DCO1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCO1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u8) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `DCO2`"]
-pub type DCO2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DCO2`"]
-pub struct DCO2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCO2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u8) & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Reader of field `DCOCTL`"]
-pub type DCOCTL_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `DCOCTL`"]
+#[doc = "Field `DCOCTL` writer - DCO Clock Frequency Control register"]
 pub struct DCOCTL_W<'a> {
     w: &'a mut W,
 }
@@ -212,13 +54,25 @@ impl<'a> DCOCTL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | ((value as u8) & 0xff);
+        self.w.bits = (self.w.bits & !0xff) | (value as u8 & 0xff);
         self.w
     }
 }
-#[doc = "Reader of field `DCO`"]
-pub type DCO_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `DCO`"]
+#[doc = "Field `DCO` reader - DCO Select Bit 0"]
+pub struct DCO_R(crate::FieldReader<u8, u8>);
+impl DCO_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        DCO_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DCO_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DCO` writer - DCO Select Bit 0"]
 pub struct DCO_W<'a> {
     w: &'a mut W,
 }
@@ -226,13 +80,25 @@ impl<'a> DCO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 5)) | (((value as u8) & 0x07) << 5);
+        self.w.bits = (self.w.bits & !(0x07 << 5)) | ((value as u8 & 0x07) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `MOD`"]
-pub type MOD_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `MOD`"]
+#[doc = "Field `MOD` reader - Modulation Bit 0"]
+pub struct MOD_R(crate::FieldReader<u8, u8>);
+impl MOD_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        MOD_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MOD_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MOD` writer - Modulation Bit 0"]
 pub struct MOD_W<'a> {
     w: &'a mut W,
 }
@@ -240,121 +106,66 @@ impl<'a> MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | ((value as u8) & 0x1f);
+        self.w.bits = (self.w.bits & !0x1f) | (value as u8 & 0x1f);
         self.w
     }
 }
 impl R {
-    #[doc = "Bit 0 - Modulation Bit 0"]
-    #[inline(always)]
-    pub fn mod0(&self) -> MOD0_R {
-        MOD0_R::new((self.bits & 0x01) != 0)
-    }
-    #[doc = "Bit 1 - Modulation Bit 1"]
-    #[inline(always)]
-    pub fn mod1(&self) -> MOD1_R {
-        MOD1_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Modulation Bit 2"]
-    #[inline(always)]
-    pub fn mod2(&self) -> MOD2_R {
-        MOD2_R::new(((self.bits >> 2) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Modulation Bit 3"]
-    #[inline(always)]
-    pub fn mod3(&self) -> MOD3_R {
-        MOD3_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - Modulation Bit 4"]
-    #[inline(always)]
-    pub fn mod4(&self) -> MOD4_R {
-        MOD4_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 5 - DCO Select Bit 0"]
-    #[inline(always)]
-    pub fn dco0(&self) -> DCO0_R {
-        DCO0_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - DCO Select Bit 1"]
-    #[inline(always)]
-    pub fn dco1(&self) -> DCO1_R {
-        DCO1_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bit 7 - DCO Select Bit 2"]
-    #[inline(always)]
-    pub fn dco2(&self) -> DCO2_R {
-        DCO2_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
     #[doc = "Bits 0:7 - DCO Clock Frequency Control register"]
     #[inline(always)]
     pub fn dcoctl(&self) -> DCOCTL_R {
         DCOCTL_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 5:7 - DCO Frequency Select"]
+    #[doc = "Bits 5:7 - DCO Select Bit 0"]
     #[inline(always)]
     pub fn dco(&self) -> DCO_R {
         DCO_R::new(((self.bits >> 5) & 0x07) as u8)
     }
-    #[doc = "Bits 0:4 - Modulator Selection"]
+    #[doc = "Bits 0:4 - Modulation Bit 0"]
     #[inline(always)]
     pub fn mod_(&self) -> MOD_R {
         MOD_R::new((self.bits & 0x1f) as u8)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Modulation Bit 0"]
-    #[inline(always)]
-    pub fn mod0(&mut self) -> MOD0_W {
-        MOD0_W { w: self }
-    }
-    #[doc = "Bit 1 - Modulation Bit 1"]
-    #[inline(always)]
-    pub fn mod1(&mut self) -> MOD1_W {
-        MOD1_W { w: self }
-    }
-    #[doc = "Bit 2 - Modulation Bit 2"]
-    #[inline(always)]
-    pub fn mod2(&mut self) -> MOD2_W {
-        MOD2_W { w: self }
-    }
-    #[doc = "Bit 3 - Modulation Bit 3"]
-    #[inline(always)]
-    pub fn mod3(&mut self) -> MOD3_W {
-        MOD3_W { w: self }
-    }
-    #[doc = "Bit 4 - Modulation Bit 4"]
-    #[inline(always)]
-    pub fn mod4(&mut self) -> MOD4_W {
-        MOD4_W { w: self }
-    }
-    #[doc = "Bit 5 - DCO Select Bit 0"]
-    #[inline(always)]
-    pub fn dco0(&mut self) -> DCO0_W {
-        DCO0_W { w: self }
-    }
-    #[doc = "Bit 6 - DCO Select Bit 1"]
-    #[inline(always)]
-    pub fn dco1(&mut self) -> DCO1_W {
-        DCO1_W { w: self }
-    }
-    #[doc = "Bit 7 - DCO Select Bit 2"]
-    #[inline(always)]
-    pub fn dco2(&mut self) -> DCO2_W {
-        DCO2_W { w: self }
-    }
     #[doc = "Bits 0:7 - DCO Clock Frequency Control register"]
     #[inline(always)]
     pub fn dcoctl(&mut self) -> DCOCTL_W {
         DCOCTL_W { w: self }
     }
-    #[doc = "Bits 5:7 - DCO Frequency Select"]
+    #[doc = "Bits 5:7 - DCO Select Bit 0"]
     #[inline(always)]
     pub fn dco(&mut self) -> DCO_W {
         DCO_W { w: self }
     }
-    #[doc = "Bits 0:4 - Modulator Selection"]
+    #[doc = "Bits 0:4 - Modulation Bit 0"]
     #[inline(always)]
     pub fn mod_(&mut self) -> MOD_W {
         MOD_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "DCO Clock Frequency Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcoctl](index.html) module"]
+pub struct DCOCTL_SPEC;
+impl crate::RegisterSpec for DCOCTL_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [dcoctl::R](R) reader structure"]
+impl crate::Readable for DCOCTL_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [dcoctl::W](W) writer structure"]
+impl crate::Writable for DCOCTL_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets DCOCTL to value 0"]
+impl crate::Resettable for DCOCTL_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

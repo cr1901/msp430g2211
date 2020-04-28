@@ -2,8 +2,8 @@
 <device>
   <name>MSP430G2211</name>
   <size>2</size>
-  <resetValue>0</resetValue>
   <access>read-write</access>
+  <resetValue>0</resetValue>
   <peripherals>
     <peripheral>
       <name>SPECIAL_FUNCTION</name>
@@ -104,6 +104,12 @@
           <addressOffset>0</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -174,12 +180,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1OUT</name>
@@ -187,6 +187,12 @@
           <addressOffset>1</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -257,12 +263,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1DIR</name>
@@ -270,6 +270,12 @@
           <addressOffset>2</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -340,12 +346,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1IFG</name>
@@ -353,6 +353,12 @@
           <addressOffset>3</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -423,12 +429,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1IES</name>
@@ -436,6 +436,12 @@
           <addressOffset>4</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -506,12 +512,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1IE</name>
@@ -519,6 +519,12 @@
           <addressOffset>5</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -589,12 +595,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1SEL</name>
@@ -602,6 +602,12 @@
           <addressOffset>6</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -672,12 +678,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P1REN</name>
@@ -685,6 +685,12 @@
           <addressOffset>7</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -755,12 +761,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2IN</name>
@@ -768,6 +768,12 @@
           <addressOffset>8</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -838,12 +844,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2OUT</name>
@@ -851,6 +851,12 @@
           <addressOffset>9</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -921,12 +927,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2DIR</name>
@@ -934,6 +934,12 @@
           <addressOffset>10</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -1004,12 +1010,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2IFG</name>
@@ -1017,6 +1017,12 @@
           <addressOffset>11</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -1087,12 +1093,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2IES</name>
@@ -1100,6 +1100,12 @@
           <addressOffset>12</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -1170,12 +1176,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2IE</name>
@@ -1183,6 +1183,12 @@
           <addressOffset>13</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -1253,12 +1259,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2SEL</name>
@@ -1266,6 +1266,12 @@
           <addressOffset>14</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -1336,12 +1342,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>P2REN</name>
@@ -1349,6 +1349,12 @@
           <addressOffset>15</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>P0</name>
@@ -1419,12 +1425,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -1549,63 +1549,13 @@
           <addressOffset>4</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
-            <field>
-              <name>MOD0</name>
-              <description>Modulation Bit 0</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MOD1</name>
-              <description>Modulation Bit 1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MOD2</name>
-              <description>Modulation Bit 2</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MOD3</name>
-              <description>Modulation Bit 3</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MOD4</name>
-              <description>Modulation Bit 4</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DCO0</name>
-              <description>DCO Select Bit 0</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DCO1</name>
-              <description>DCO Select Bit 1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DCO2</name>
-              <description>DCO Select Bit 2</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
             <field>
               <name>DCOCTL</name>
               <description>DCO Clock Frequency Control register</description>
@@ -1620,7 +1570,7 @@
             </field>
             <field>
               <name>DCO</name>
-              <description>DCO Frequency Select</description>
+              <description>DCO Select Bit 0</description>
               <bitOffset>5</bitOffset>
               <bitWidth>3</bitWidth>
               <writeConstraint>
@@ -1632,7 +1582,7 @@
             </field>
             <field>
               <name>MOD</name>
-              <description>Modulator Selection</description>
+              <description>Modulation Bit 0</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
               <writeConstraint>
@@ -1643,12 +1593,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>BCSCTL1</name>
@@ -1657,34 +1601,6 @@
           <size>8</size>
           <resetMask>255</resetMask>
           <fields>
-            <field>
-              <name>RSEL0</name>
-              <description>Range Select Bit 0</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RSEL1</name>
-              <description>Range Select Bit 1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RSEL2</name>
-              <description>Range Select Bit 2</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RSEL3</name>
-              <description>Range Select Bit 3</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
             <field>
               <name>DIVA</name>
               <description>ACLK Divider 0</description>
@@ -1742,7 +1658,7 @@
             </field>
             <field>
               <name>RSEL</name>
-              <description>Range Select</description>
+              <description>Range Select Bit 0</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
               <writeConstraint>
@@ -1950,6 +1866,12 @@
           <addressOffset>2</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>CAOUT</name>
@@ -1966,41 +1888,6 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>P2CA0</name>
-              <description>Comp. A +Terminal Multiplexer</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>P2CA1</name>
-              <description>Comp. A -Terminal Multiplexer</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>P2CA2</name>
-              <description>Comp. A -Terminal Multiplexer</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>P2CA3</name>
-              <description>Comp. A -Terminal Multiplexer</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>P2CA4</name>
-              <description>Comp. A +Terminal Multiplexer</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
               <name>CASHORT</name>
               <description>Comp. A Short + and - Terminals</description>
               <bitOffset>7</bitOffset>
@@ -2009,23 +1896,175 @@
             </field>
             <field>
               <name>P2CA</name>
-              <description>Comparator A +/-Terminal Multiplexer register</description>
+              <description>Comp. A +Terminal Multiplexer</description>
               <bitOffset>2</bitOffset>
               <bitWidth>5</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>31</maximum>
-                </range>
-              </writeConstraint>
+              <enumeratedValues>
+                <name>P2CA</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NONE_NONE</name>
+                  <description>No + or - connection</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NONE_CA1</name>
+                  <description>No connection to +, connect - to CA1</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NONE_CA2</name>
+                  <description>No connection to +, connect - to CA2</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NONE_CA3</name>
+                  <description>No connection to +, connect - to CA3</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NONE_CA4</name>
+                  <description>No connection to +, connect - to CA4</description>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NONE_CA5</name>
+                  <description>No connection to +, connect - to CA5</description>
+                  <value>10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NONE_CA6</name>
+                  <description>No connection to +, connect - to CA6</description>
+                  <value>12</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NONE_CA7</name>
+                  <description>No connection to +, connect - to CA7</description>
+                  <value>14</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA0_NONE</name>
+                  <description>Connect + to CA0, no connection to -</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA0_CA1</name>
+                  <description>Connect + to CA0, connect - to CA1</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA0_CA2</name>
+                  <description>Connect + to CA0, connect - to CA2</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA0_CA3</name>
+                  <description>Connect + to CA0, connect - to CA3</description>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA0_CA4</name>
+                  <description>Connect + to CA0, connect - to CA4</description>
+                  <value>9</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA0_CA5</name>
+                  <description>Connect + to CA0, connect - to CA5</description>
+                  <value>11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA0_CA6</name>
+                  <description>Connect + to CA0, connect - to CA6</description>
+                  <value>13</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA0_CA7</name>
+                  <description>Connect + to CA0, connect - to CA7</description>
+                  <value>15</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA1_NONE</name>
+                  <description>Connect + to CA1, no connection to -</description>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA1_CA1</name>
+                  <description>Connect + to CA1, connect - to CA1</description>
+                  <value>18</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA1_CA2</name>
+                  <description>Connect + to CA1, connect - to CA2</description>
+                  <value>20</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA1_CA3</name>
+                  <description>Connect + to CA1, connect - to CA3</description>
+                  <value>22</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA1_CA4</name>
+                  <description>Connect + to CA1, connect - to CA4</description>
+                  <value>24</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA1_CA5</name>
+                  <description>Connect + to CA1, connect - to CA5</description>
+                  <value>26</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA1_CA6</name>
+                  <description>Connect + to CA1, connect - to CA6</description>
+                  <value>28</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA1_CA7</name>
+                  <description>Connect + to CA1, connect - to CA7</description>
+                  <value>30</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA2_NONE</name>
+                  <description>Connect + to CA2, no connection to -</description>
+                  <value>17</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA2_CA1</name>
+                  <description>Connect + to CA2, connect - to CA1</description>
+                  <value>19</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA2_CA2</name>
+                  <description>Connect + to CA2, connect - to CA2</description>
+                  <value>21</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA2_CA3</name>
+                  <description>Connect + to CA2, connect - to CA3</description>
+                  <value>23</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA2_CA4</name>
+                  <description>Connect + to CA2, connect - to CA4</description>
+                  <value>25</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA2_CA5</name>
+                  <description>Connect + to CA2, connect - to CA5</description>
+                  <value>27</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA2_CA6</name>
+                  <description>Connect + to CA2, connect - to CA6</description>
+                  <value>29</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CA2_CA7</name>
+                  <description>Connect + to CA2, connect - to CA7</description>
+                  <value>31</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
         <register>
           <name>CAPD</name>
@@ -2033,6 +2072,12 @@
           <addressOffset>3</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
           <fields>
             <field>
               <name>CAPD0</name>
@@ -2103,12 +2148,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -2119,6 +2158,10 @@
       <registers>
         <register>
           <name>CALDCO_1MHZ</name>
+          <description>DCOCTL  Calibration Data for 1MHz</description>
+          <addressOffset>0</addressOffset>
+          <size>8</size>
+          <resetMask>255</resetMask>
           <fields>
             <field>
               <name>CALDCO_1MHZ</name>
@@ -2127,13 +2170,13 @@
               <bitWidth>8</bitWidth>
             </field>
           </fields>
-          <description>DCOCTL  Calibration Data for 1MHz</description>
-          <addressOffset>0</addressOffset>
-          <size>8</size>
-          <resetMask>255</resetMask>
         </register>
         <register>
           <name>CALBC1_1MHZ</name>
+          <description>BCSCTL1 Calibration Data for 1MHz</description>
+          <addressOffset>1</addressOffset>
+          <size>8</size>
+          <resetMask>255</resetMask>
           <fields>
             <field>
               <name>CALBC1_1MHZ</name>
@@ -2142,10 +2185,6 @@
               <bitWidth>8</bitWidth>
             </field>
           </fields>
-          <description>BCSCTL1 Calibration Data for 1MHz</description>
-          <addressOffset>1</addressOffset>
-          <size>8</size>
-          <resetMask>255</resetMask>
         </register>
       </registers>
     </peripheral>
@@ -2161,20 +2200,6 @@
           <size>16</size>
           <resetMask>65535</resetMask>
           <fields>
-            <field>
-              <name>WDTIS0</name>
-              <description>WDTIS0</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>WDTIS1</name>
-              <description>WDTIS1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
             <field>
               <name>WDTSSEL</name>
               <description>WDTSSEL</description>
@@ -2240,6 +2265,12 @@
                   <value>90</value>
                 </enumeratedValue>
               </enumeratedValues>
+            </field>
+            <field>
+              <name>WDTIS</name>
+              <description>WDTIS0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
             </field>
           </fields>
         </register>
@@ -2319,48 +2350,6 @@
           <resetMask>65535</resetMask>
           <fields>
             <field>
-              <name>FN0</name>
-              <description>Divide Flash clock by 1 to 64 using FN0 to FN5 according to:</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FN1</name>
-              <description>32*FN5 + 16*FN4 + 8*FN3 + 4*FN2 + 2*FN1 + FN0 + 1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FN2</name>
-              <description>FN2</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FN3</name>
-              <description>FN3</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FN4</name>
-              <description>FN4</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FN5</name>
-              <description>FN5</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
               <name>FSSEL</name>
               <description>Flash clock select 0 */        /* to distinguish from USART SSELx</description>
               <bitOffset>6</bitOffset>
@@ -2415,7 +2404,7 @@
             </field>
             <field>
               <name>FN</name>
-              <description>Flash Controller Clock Divider</description>
+              <description>Divide Flash clock by 1 to 64 using FN0 to FN5 according to:</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
               <writeConstraint>
@@ -2986,6 +2975,10 @@
         </register>
         <register>
           <name>TAIV</name>
+          <description>Timer A Interrupt Vector Word</description>
+          <addressOffset>0</addressOffset>
+          <size>16</size>
+          <resetMask>65535</resetMask>
           <fields>
             <field>
               <name>TAIV</name>
@@ -3013,16 +3006,13 @@
               </enumeratedValues>
             </field>
           </fields>
-          <description>Timer A Interrupt Vector Word</description>
-          <addressOffset>0</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <NONE>[0, 'No interrupt pending']</NONE>
-          <TACCR1>[2, 'Capture/Compare 1']</TACCR1>
-          <TAIFG>[10, 'Timer overflow']</TAIFG>
         </register>
         <register>
           <name>TAR</name>
+          <description>Timer A Counter Register</description>
+          <addressOffset>66</addressOffset>
+          <size>16</size>
+          <resetMask>65535</resetMask>
           <fields>
             <field>
               <name>TAR</name>
@@ -3037,13 +3027,13 @@
               </writeConstraint>
             </field>
           </fields>
-          <description>Timer A Counter Register</description>
-          <addressOffset>66</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
         </register>
         <register>
           <name>TACCR0</name>
+          <description>Timer A Capture/Compare 0</description>
+          <addressOffset>68</addressOffset>
+          <size>16</size>
+          <resetMask>65535</resetMask>
           <fields>
             <field>
               <name>TACCR0</name>
@@ -3058,13 +3048,13 @@
               </writeConstraint>
             </field>
           </fields>
-          <description>Timer A Capture/Compare 0</description>
-          <addressOffset>68</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
         </register>
         <register>
           <name>TACCR1</name>
+          <description>Timer A Capture/Compare 1</description>
+          <addressOffset>70</addressOffset>
+          <size>16</size>
+          <resetMask>65535</resetMask>
           <fields>
             <field>
               <name>TACCR1</name>
@@ -3079,10 +3069,6 @@
               </writeConstraint>
             </field>
           </fields>
-          <description>Timer A Capture/Compare 1</description>
-          <addressOffset>70</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
         </register>
       </registers>
     </peripheral>
@@ -3129,7 +3115,7 @@
   <vendorExtensions>
     <msp430_svd>
       <version>0.2.0</version>
-      <commit_hash>b89c4f6</commit_hash>
+      <commit_hash>e97d967</commit_hash>
     </msp430_svd>
   </vendorExtensions>
 </device>

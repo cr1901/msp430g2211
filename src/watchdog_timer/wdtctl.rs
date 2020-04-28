@@ -1,66 +1,52 @@
-#[doc = "Reader of register WDTCTL"]
-pub type R = crate::R<u16, super::WDTCTL>;
-#[doc = "Writer for register WDTCTL"]
-pub type W = crate::W<u16, super::WDTCTL>;
-#[doc = "Register WDTCTL `reset()`'s with value 0"]
-impl crate::ResetValue for super::WDTCTL {
-    type Type = u16;
+#[doc = "Register `WDTCTL` reader"]
+pub struct R(crate::R<WDTCTL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<WDTCTL_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `WDTIS0`"]
-pub type WDTIS0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTIS0`"]
-pub struct WDTIS0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDTIS0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
-        self.w
+impl core::convert::From<crate::R<WDTCTL_SPEC>> for R {
+    fn from(reader: crate::R<WDTCTL_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `WDTIS1`"]
-pub type WDTIS1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTIS1`"]
-pub struct WDTIS1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDTIS1_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `WDTCTL` writer"]
+pub struct W(crate::W<WDTCTL_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<WDTCTL_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `WDTSSEL`"]
-pub type WDTSSEL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTSSEL`"]
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<WDTCTL_SPEC>> for W {
+    fn from(writer: crate::W<WDTCTL_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `WDTSSEL` reader - WDTSSEL"]
+pub struct WDTSSEL_R(crate::FieldReader<bool, bool>);
+impl WDTSSEL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        WDTSSEL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for WDTSSEL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `WDTSSEL` writer - WDTSSEL"]
 pub struct WDTSSEL_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +64,25 @@ impl<'a> WDTSSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `WDTCNTCL`"]
-pub type WDTCNTCL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTCNTCL`"]
+#[doc = "Field `WDTCNTCL` reader - WDTCNTCL"]
+pub struct WDTCNTCL_R(crate::FieldReader<bool, bool>);
+impl WDTCNTCL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        WDTCNTCL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for WDTCNTCL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `WDTCNTCL` writer - WDTCNTCL"]
 pub struct WDTCNTCL_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +100,25 @@ impl<'a> WDTCNTCL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `WDTTMSEL`"]
-pub type WDTTMSEL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTTMSEL`"]
+#[doc = "Field `WDTTMSEL` reader - WDTTMSEL"]
+pub struct WDTTMSEL_R(crate::FieldReader<bool, bool>);
+impl WDTTMSEL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        WDTTMSEL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for WDTTMSEL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `WDTTMSEL` writer - WDTTMSEL"]
 pub struct WDTTMSEL_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +136,25 @@ impl<'a> WDTTMSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u16) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `WDTNMI`"]
-pub type WDTNMI_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTNMI`"]
+#[doc = "Field `WDTNMI` reader - WDTNMI"]
+pub struct WDTNMI_R(crate::FieldReader<bool, bool>);
+impl WDTNMI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        WDTNMI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for WDTNMI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `WDTNMI` writer - WDTNMI"]
 pub struct WDTNMI_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +172,25 @@ impl<'a> WDTNMI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u16) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `WDTNMIES`"]
-pub type WDTNMIES_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTNMIES`"]
+#[doc = "Field `WDTNMIES` reader - WDTNMIES"]
+pub struct WDTNMIES_R(crate::FieldReader<bool, bool>);
+impl WDTNMIES_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        WDTNMIES_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for WDTNMIES_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `WDTNMIES` writer - WDTNMIES"]
 pub struct WDTNMIES_W<'a> {
     w: &'a mut W,
 }
@@ -174,13 +208,25 @@ impl<'a> WDTNMIES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u16) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u16 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `WDTHOLD`"]
-pub type WDTHOLD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTHOLD`"]
+#[doc = "Field `WDTHOLD` reader - WDTHOLD"]
+pub struct WDTHOLD_R(crate::FieldReader<bool, bool>);
+impl WDTHOLD_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        WDTHOLD_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for WDTHOLD_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `WDTHOLD` writer - WDTHOLD"]
 pub struct WDTHOLD_W<'a> {
     w: &'a mut W,
 }
@@ -198,7 +244,7 @@ impl<'a> WDTHOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u16) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
         self.w
     }
 }
@@ -215,22 +261,31 @@ impl From<WDTPW_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `WDTPW`"]
-pub type WDTPW_R = crate::R<u8, WDTPW_A>;
+#[doc = "Field `WDTPW` reader - Watchdog Timer Password"]
+pub struct WDTPW_R(crate::FieldReader<u8, WDTPW_A>);
 impl WDTPW_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        WDTPW_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> crate::Variant<u8, WDTPW_A> {
-        use crate::Variant::*;
+    pub fn variant(&self) -> Option<WDTPW_A> {
         match self.bits {
-            105 => Val(WDTPW_A::PASSWORD),
-            i => Res(i),
+            105 => Some(WDTPW_A::PASSWORD),
+            _ => None,
         }
     }
     #[doc = "Checks if the value of the field is `PASSWORD`"]
     #[inline(always)]
     pub fn is_password(&self) -> bool {
-        *self == WDTPW_A::PASSWORD
+        **self == WDTPW_A::PASSWORD
+    }
+}
+impl core::ops::Deref for WDTPW_R {
+    type Target = crate::FieldReader<u8, WDTPW_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 #[doc = "Watchdog Timer Password\n\nValue on reset: 0"]
@@ -246,7 +301,7 @@ impl From<WDTPW_AW> for u8 {
         variant as _
     }
 }
-#[doc = "Write proxy for field `WDTPW`"]
+#[doc = "Field `WDTPW` writer - Watchdog Timer Password"]
 pub struct WDTPW_W<'a> {
     w: &'a mut W,
 }
@@ -264,21 +319,37 @@ impl<'a> WDTPW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u16) & 0xff) << 8);
+        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u16 & 0xff) << 8);
+        self.w
+    }
+}
+#[doc = "Field `WDTIS` reader - WDTIS0"]
+pub struct WDTIS_R(crate::FieldReader<u8, u8>);
+impl WDTIS_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        WDTIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for WDTIS_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `WDTIS` writer - WDTIS0"]
+pub struct WDTIS_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> WDTIS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x03) | (value as u16 & 0x03);
         self.w
     }
 }
 impl R {
-    #[doc = "Bit 0 - WDTIS0"]
-    #[inline(always)]
-    pub fn wdtis0(&self) -> WDTIS0_R {
-        WDTIS0_R::new((self.bits & 0x01) != 0)
-    }
-    #[doc = "Bit 1 - WDTIS1"]
-    #[inline(always)]
-    pub fn wdtis1(&self) -> WDTIS1_R {
-        WDTIS1_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
     #[doc = "Bit 2 - WDTSSEL"]
     #[inline(always)]
     pub fn wdtssel(&self) -> WDTSSEL_R {
@@ -314,18 +385,13 @@ impl R {
     pub fn wdtpw(&self) -> WDTPW_R {
         WDTPW_R::new(((self.bits >> 8) & 0xff) as u8)
     }
+    #[doc = "Bits 0:1 - WDTIS0"]
+    #[inline(always)]
+    pub fn wdtis(&self) -> WDTIS_R {
+        WDTIS_R::new((self.bits & 0x03) as u8)
+    }
 }
 impl W {
-    #[doc = "Bit 0 - WDTIS0"]
-    #[inline(always)]
-    pub fn wdtis0(&mut self) -> WDTIS0_W {
-        WDTIS0_W { w: self }
-    }
-    #[doc = "Bit 1 - WDTIS1"]
-    #[inline(always)]
-    pub fn wdtis1(&mut self) -> WDTIS1_W {
-        WDTIS1_W { w: self }
-    }
     #[doc = "Bit 2 - WDTSSEL"]
     #[inline(always)]
     pub fn wdtssel(&mut self) -> WDTSSEL_W {
@@ -360,5 +426,35 @@ impl W {
     #[inline(always)]
     pub fn wdtpw(&mut self) -> WDTPW_W {
         WDTPW_W { w: self }
+    }
+    #[doc = "Bits 0:1 - WDTIS0"]
+    #[inline(always)]
+    pub fn wdtis(&mut self) -> WDTIS_W {
+        WDTIS_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Watchdog Timer Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wdtctl](index.html) module"]
+pub struct WDTCTL_SPEC;
+impl crate::RegisterSpec for WDTCTL_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [wdtctl::R](R) reader structure"]
+impl crate::Readable for WDTCTL_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [wdtctl::W](W) writer structure"]
+impl crate::Writable for WDTCTL_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets WDTCTL to value 0"]
+impl crate::Resettable for WDTCTL_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

@@ -1,109 +1,35 @@
-#[doc = "Reader of register BCSCTL1"]
-pub type R = crate::R<u8, super::BCSCTL1>;
-#[doc = "Writer for register BCSCTL1"]
-pub type W = crate::W<u8, super::BCSCTL1>;
-#[doc = "Register BCSCTL1 `reset()`'s with value 0"]
-impl crate::ResetValue for super::BCSCTL1 {
-    type Type = u8;
+#[doc = "Register `BCSCTL1` reader"]
+pub struct R(crate::R<BCSCTL1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<BCSCTL1_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `RSEL0`"]
-pub type RSEL0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RSEL0`"]
-pub struct RSEL0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSEL0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u8) & 0x01);
-        self.w
+impl core::convert::From<crate::R<BCSCTL1_SPEC>> for R {
+    fn from(reader: crate::R<BCSCTL1_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `RSEL1`"]
-pub type RSEL1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RSEL1`"]
-pub struct RSEL1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSEL1_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `BCSCTL1` writer"]
+pub struct W(crate::W<BCSCTL1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<BCSCTL1_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u8) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `RSEL2`"]
-pub type RSEL2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RSEL2`"]
-pub struct RSEL2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSEL2_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u8) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `RSEL3`"]
-pub type RSEL3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RSEL3`"]
-pub struct RSEL3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSEL3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u8) & 0x01) << 3);
-        self.w
+impl core::convert::From<crate::W<BCSCTL1_SPEC>> for W {
+    fn from(writer: crate::W<BCSCTL1_SPEC>) -> Self {
+        W(writer)
     }
 }
 #[doc = "ACLK Divider 0\n\nValue on reset: 0"]
@@ -125,9 +51,12 @@ impl From<DIVA_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `DIVA`"]
-pub type DIVA_R = crate::R<u8, DIVA_A>;
+#[doc = "Field `DIVA` reader - ACLK Divider 0"]
+pub struct DIVA_R(crate::FieldReader<u8, DIVA_A>);
 impl DIVA_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        DIVA_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DIVA_A {
@@ -142,25 +71,32 @@ impl DIVA_R {
     #[doc = "Checks if the value of the field is `DIVA_0`"]
     #[inline(always)]
     pub fn is_diva_0(&self) -> bool {
-        *self == DIVA_A::DIVA_0
+        **self == DIVA_A::DIVA_0
     }
     #[doc = "Checks if the value of the field is `DIVA_1`"]
     #[inline(always)]
     pub fn is_diva_1(&self) -> bool {
-        *self == DIVA_A::DIVA_1
+        **self == DIVA_A::DIVA_1
     }
     #[doc = "Checks if the value of the field is `DIVA_2`"]
     #[inline(always)]
     pub fn is_diva_2(&self) -> bool {
-        *self == DIVA_A::DIVA_2
+        **self == DIVA_A::DIVA_2
     }
     #[doc = "Checks if the value of the field is `DIVA_3`"]
     #[inline(always)]
     pub fn is_diva_3(&self) -> bool {
-        *self == DIVA_A::DIVA_3
+        **self == DIVA_A::DIVA_3
     }
 }
-#[doc = "Write proxy for field `DIVA`"]
+impl core::ops::Deref for DIVA_R {
+    type Target = crate::FieldReader<u8, DIVA_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DIVA` writer - ACLK Divider 0"]
 pub struct DIVA_W<'a> {
     w: &'a mut W,
 }
@@ -168,9 +104,7 @@ impl<'a> DIVA_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: DIVA_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "ACLK Divider 0: /1"]
     #[inline(always)]
@@ -195,13 +129,25 @@ impl<'a> DIVA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | (((value as u8) & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u8 & 0x03) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `XTS`"]
-pub type XTS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `XTS`"]
+#[doc = "Field `XTS` reader - LFXTCLK 0:Low Freq. / 1: High Freq."]
+pub struct XTS_R(crate::FieldReader<bool, bool>);
+impl XTS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        XTS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for XTS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `XTS` writer - LFXTCLK 0:Low Freq. / 1: High Freq."]
 pub struct XTS_W<'a> {
     w: &'a mut W,
 }
@@ -219,13 +165,25 @@ impl<'a> XTS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u8) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `XT2OFF`"]
-pub type XT2OFF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `XT2OFF`"]
+#[doc = "Field `XT2OFF` reader - Enable XT2CLK"]
+pub struct XT2OFF_R(crate::FieldReader<bool, bool>);
+impl XT2OFF_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        XT2OFF_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for XT2OFF_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `XT2OFF` writer - Enable XT2CLK"]
 pub struct XT2OFF_W<'a> {
     w: &'a mut W,
 }
@@ -243,13 +201,25 @@ impl<'a> XT2OFF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u8) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
         self.w
     }
 }
-#[doc = "Reader of field `BCSCTL1`"]
-pub type BCSCTL1_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `BCSCTL1`"]
+#[doc = "Field `BCSCTL1` reader - Basic Clock System Control 1 register"]
+pub struct BCSCTL1_R(crate::FieldReader<u8, u8>);
+impl BCSCTL1_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        BCSCTL1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for BCSCTL1_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `BCSCTL1` writer - Basic Clock System Control 1 register"]
 pub struct BCSCTL1_W<'a> {
     w: &'a mut W,
 }
@@ -257,13 +227,25 @@ impl<'a> BCSCTL1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | ((value as u8) & 0xff);
+        self.w.bits = (self.w.bits & !0xff) | (value as u8 & 0xff);
         self.w
     }
 }
-#[doc = "Reader of field `RSEL`"]
-pub type RSEL_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `RSEL`"]
+#[doc = "Field `RSEL` reader - Range Select Bit 0"]
+pub struct RSEL_R(crate::FieldReader<u8, u8>);
+impl RSEL_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        RSEL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RSEL_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RSEL` writer - Range Select Bit 0"]
 pub struct RSEL_W<'a> {
     w: &'a mut W,
 }
@@ -271,31 +253,11 @@ impl<'a> RSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u8) & 0x0f);
+        self.w.bits = (self.w.bits & !0x0f) | (value as u8 & 0x0f);
         self.w
     }
 }
 impl R {
-    #[doc = "Bit 0 - Range Select Bit 0"]
-    #[inline(always)]
-    pub fn rsel0(&self) -> RSEL0_R {
-        RSEL0_R::new((self.bits & 0x01) != 0)
-    }
-    #[doc = "Bit 1 - Range Select Bit 1"]
-    #[inline(always)]
-    pub fn rsel1(&self) -> RSEL1_R {
-        RSEL1_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Range Select Bit 2"]
-    #[inline(always)]
-    pub fn rsel2(&self) -> RSEL2_R {
-        RSEL2_R::new(((self.bits >> 2) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Range Select Bit 3"]
-    #[inline(always)]
-    pub fn rsel3(&self) -> RSEL3_R {
-        RSEL3_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
     #[doc = "Bits 4:5 - ACLK Divider 0"]
     #[inline(always)]
     pub fn diva(&self) -> DIVA_R {
@@ -316,33 +278,13 @@ impl R {
     pub fn bcsctl1(&self) -> BCSCTL1_R {
         BCSCTL1_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 0:3 - Range Select"]
+    #[doc = "Bits 0:3 - Range Select Bit 0"]
     #[inline(always)]
     pub fn rsel(&self) -> RSEL_R {
         RSEL_R::new((self.bits & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Range Select Bit 0"]
-    #[inline(always)]
-    pub fn rsel0(&mut self) -> RSEL0_W {
-        RSEL0_W { w: self }
-    }
-    #[doc = "Bit 1 - Range Select Bit 1"]
-    #[inline(always)]
-    pub fn rsel1(&mut self) -> RSEL1_W {
-        RSEL1_W { w: self }
-    }
-    #[doc = "Bit 2 - Range Select Bit 2"]
-    #[inline(always)]
-    pub fn rsel2(&mut self) -> RSEL2_W {
-        RSEL2_W { w: self }
-    }
-    #[doc = "Bit 3 - Range Select Bit 3"]
-    #[inline(always)]
-    pub fn rsel3(&mut self) -> RSEL3_W {
-        RSEL3_W { w: self }
-    }
     #[doc = "Bits 4:5 - ACLK Divider 0"]
     #[inline(always)]
     pub fn diva(&mut self) -> DIVA_W {
@@ -363,9 +305,34 @@ impl W {
     pub fn bcsctl1(&mut self) -> BCSCTL1_W {
         BCSCTL1_W { w: self }
     }
-    #[doc = "Bits 0:3 - Range Select"]
+    #[doc = "Bits 0:3 - Range Select Bit 0"]
     #[inline(always)]
     pub fn rsel(&mut self) -> RSEL_W {
         RSEL_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Basic Clock System Control 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bcsctl1](index.html) module"]
+pub struct BCSCTL1_SPEC;
+impl crate::RegisterSpec for BCSCTL1_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [bcsctl1::R](R) reader structure"]
+impl crate::Readable for BCSCTL1_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [bcsctl1::W](W) writer structure"]
+impl crate::Writable for BCSCTL1_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets BCSCTL1 to value 0"]
+impl crate::Resettable for BCSCTL1_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }
