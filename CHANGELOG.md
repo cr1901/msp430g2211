@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+This crate was regenerated twice to take advantage of svd2rust commit 26baf2c
+and then svd2rust 0.18.0. Non-breaking changes include:
+
+- The newer version of msp430_svd did not cause significant changes to this
+  crate (some fields of the SVD were moved around).
+
+Breaking changes include:
+
+- _Both_ new versions of svd2rust caused backwards-incompatible changes.
+  See commits 287e48a and 68e45a9.
 
 ## [v0.2.1] - 2021-04-16
 - Put msp430_svd version information into the SVD file using
