@@ -2513,6 +2513,40 @@
       <baseAddress>302</baseAddress>
       <registers>
         <register>
+          <name>TAIV</name>
+          <description>Timer A Interrupt Vector Word</description>
+          <addressOffset>0</addressOffset>
+          <size>16</size>
+          <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TAIV</name>
+              <description>Timer A Interrupt Vector value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>TAIV</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NONE</name>
+                  <description>No interrupt pending</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TACCR1</name>
+                  <description>Capture/Compare 1</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TAIFG</name>
+                  <description>Timer overflow</description>
+                  <value>10</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
           <name>TACTL</name>
           <description>Timer A Control</description>
           <addressOffset>50</addressOffset>
@@ -2974,40 +3008,6 @@
           </fields>
         </register>
         <register>
-          <name>TAIV</name>
-          <description>Timer A Interrupt Vector Word</description>
-          <addressOffset>0</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <fields>
-            <field>
-              <name>TAIV</name>
-              <description>Timer A Interrupt Vector value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>4</bitWidth>
-              <enumeratedValues>
-                <name>TAIV</name>
-                <usage>read-write</usage>
-                <enumeratedValue>
-                  <name>NONE</name>
-                  <description>No interrupt pending</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TACCR1</name>
-                  <description>Capture/Compare 1</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TAIFG</name>
-                  <description>Timer overflow</description>
-                  <value>10</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-        <register>
           <name>TAR</name>
           <description>Timer A Counter Register</description>
           <addressOffset>66</addressOffset>
@@ -3115,7 +3115,7 @@
   <vendorExtensions>
     <msp430_svd>
       <version>0.2.0</version>
-      <commit_hash>e97d967</commit_hash>
+      <commit_hash>eb546a0</commit_hash>
     </msp430_svd>
   </vendorExtensions>
 </device>
