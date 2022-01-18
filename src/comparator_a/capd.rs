@@ -7,7 +7,8 @@ impl core::ops::Deref for R {
         &self.0
     }
 }
-impl core::convert::From<crate::R<CAPD_SPEC>> for R {
+impl From<crate::R<CAPD_SPEC>> for R {
+    #[inline(always)]
     fn from(reader: crate::R<CAPD_SPEC>) -> Self {
         R(reader)
     }
@@ -27,7 +28,8 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl core::convert::From<crate::W<CAPD_SPEC>> for W {
+impl From<crate::W<CAPD_SPEC>> for W {
+    #[inline(always)]
     fn from(writer: crate::W<CAPD_SPEC>) -> Self {
         W(writer)
     }
@@ -35,6 +37,7 @@ impl core::convert::From<crate::W<CAPD_SPEC>> for W {
 #[doc = "Field `CAPD0` reader - Comp. A Disable Input Buffer of Port Register .0"]
 pub struct CAPD0_R(crate::FieldReader<bool, bool>);
 impl CAPD0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAPD0_R(crate::FieldReader::new(bits))
     }
@@ -71,6 +74,7 @@ impl<'a> CAPD0_W<'a> {
 #[doc = "Field `CAPD1` reader - Comp. A Disable Input Buffer of Port Register .1"]
 pub struct CAPD1_R(crate::FieldReader<bool, bool>);
 impl CAPD1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAPD1_R(crate::FieldReader::new(bits))
     }
@@ -107,6 +111,7 @@ impl<'a> CAPD1_W<'a> {
 #[doc = "Field `CAPD2` reader - Comp. A Disable Input Buffer of Port Register .2"]
 pub struct CAPD2_R(crate::FieldReader<bool, bool>);
 impl CAPD2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAPD2_R(crate::FieldReader::new(bits))
     }
@@ -143,6 +148,7 @@ impl<'a> CAPD2_W<'a> {
 #[doc = "Field `CAPD3` reader - Comp. A Disable Input Buffer of Port Register .3"]
 pub struct CAPD3_R(crate::FieldReader<bool, bool>);
 impl CAPD3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAPD3_R(crate::FieldReader::new(bits))
     }
@@ -179,6 +185,7 @@ impl<'a> CAPD3_W<'a> {
 #[doc = "Field `CAPD4` reader - Comp. A Disable Input Buffer of Port Register .4"]
 pub struct CAPD4_R(crate::FieldReader<bool, bool>);
 impl CAPD4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAPD4_R(crate::FieldReader::new(bits))
     }
@@ -215,6 +222,7 @@ impl<'a> CAPD4_W<'a> {
 #[doc = "Field `CAPD5` reader - Comp. A Disable Input Buffer of Port Register .5"]
 pub struct CAPD5_R(crate::FieldReader<bool, bool>);
 impl CAPD5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAPD5_R(crate::FieldReader::new(bits))
     }
@@ -251,6 +259,7 @@ impl<'a> CAPD5_W<'a> {
 #[doc = "Field `CAPD6` reader - Comp. A Disable Input Buffer of Port Register .6"]
 pub struct CAPD6_R(crate::FieldReader<bool, bool>);
 impl CAPD6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAPD6_R(crate::FieldReader::new(bits))
     }
@@ -287,6 +296,7 @@ impl<'a> CAPD6_W<'a> {
 #[doc = "Field `CAPD7` reader - Comp. A Disable Input Buffer of Port Register .7"]
 pub struct CAPD7_R(crate::FieldReader<bool, bool>);
 impl CAPD7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAPD7_R(crate::FieldReader::new(bits))
     }
@@ -323,6 +333,7 @@ impl<'a> CAPD7_W<'a> {
 #[doc = "Field `CAPD` reader - Comparator A Port Disable register"]
 pub struct CAPD_R(crate::FieldReader<u8, u8>);
 impl CAPD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CAPD_R(crate::FieldReader::new(bits))
     }
@@ -342,7 +353,7 @@ impl<'a> CAPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u8 & 0xff);
+        self.w.bits = value as u8;
         self.w
     }
 }
@@ -390,7 +401,7 @@ impl R {
     #[doc = "Bits 0:7 - Comparator A Port Disable register"]
     #[inline(always)]
     pub fn capd(&self) -> CAPD_R {
-        CAPD_R::new((self.bits & 0xff) as u8)
+        CAPD_R::new(self.bits as u8)
     }
 }
 impl W {
@@ -440,6 +451,7 @@ impl W {
         CAPD_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
         self.0.bits(bits);
         self

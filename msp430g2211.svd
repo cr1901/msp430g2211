@@ -3115,7 +3115,7 @@
   <vendorExtensions>
     <msp430_svd>
       <version>0.2.0</version>
-      <commit_hash>eb546a0</commit_hash>
+      <commit_hash>564e4d1</commit_hash>
     </msp430_svd>
   </vendorExtensions>
 </device>

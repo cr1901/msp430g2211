@@ -3,7 +3,7 @@
 pub struct RegisterBlock {
     #[doc = "0x00 - Interrupt Enable 1"]
     pub ie1: crate::Reg<ie1::IE1_SPEC>,
-    _reserved1: [u8; 1usize],
+    _reserved1: [u8; 0x01],
     #[doc = "0x02 - Interrupt Flag 1"]
     pub ifg1: crate::Reg<ifg1::IFG1_SPEC>,
 }
