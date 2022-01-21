@@ -11,6 +11,7 @@ documentation = "https://docs.rs/msp430g2211"
 keywords = ["no-std", "msp430", "ti", "launchpad"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/cr1901/msp430g2211"
+edition = "2018"
 
 [dependencies]
 bare-metal = "1.0.0"
