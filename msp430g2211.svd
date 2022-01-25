@@ -2271,6 +2271,12 @@
               <description>WDTIS0</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>3</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -3115,7 +3121,7 @@
   <vendorExtensions>
     <msp430_svd>
       <version>0.2.0</version>
-      <commit_hash>564e4d1</commit_hash>
+      <commit_hash>31091a0</commit_hash>
     </msp430_svd>
   </vendorExtensions>
 </device>
