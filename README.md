@@ -5,7 +5,7 @@
 
 > Peripheral access API for MSP430G2211 microcontroller.
 
-Generated using [svd2rust] v0.11.1.
+Generated using [svd2rust] v0.20.0.
 
 [svd2rust]: https://github.com/japaric/svd2rust
 

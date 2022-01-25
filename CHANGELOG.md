@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [v0.3.0] - 2022-01-25
 This crate was regenerated three times to take advantage of svd2rust commit 26baf2c,
 svd2rust 0.18.0, and then svd2rust 0.20.0. Non-breaking changes include:
 
@@ -46,7 +48,8 @@ Version `v0.1.2` was never released due to an oversight.
 
 Initial release
 
-[Unreleased]: https://github.com/cr1901/msp430g2211/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/cr1901/msp430g2211/compare/v0.3.0...HEAD
+[v0.3.0]: https://github.com/cr1901/msp430g2211/compare/v0.2.1...v0.3.0
 [v0.2.1]: https://github.com/cr1901/msp430g2211/compare/v0.2.0...v0.2.1
 [v0.2.0]: https://github.com/cr1901/msp430g2211/compare/v0.1.4...v0.2.0
 [v0.1.4]: https://github.com/cr1901/msp430g2211/compare/v0.1.3...v0.1.4
