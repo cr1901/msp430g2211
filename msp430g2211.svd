@@ -1,7 +1,12 @@
 <?xml version="1.0"?>
-<device>
+<device xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <vendor>msp430gen</vendor>
   <name>MSP430G2211</name>
-  <size>2</size>
+  <version>v0.4.0</version>
+  <description/>
+  <addressUnitBits>8</addressUnitBits>
+  <width>16</width>
+  <size>16</size>
   <access>read-write</access>
   <resetValue>0</resetValue>
   <peripherals>
@@ -3118,10 +3123,4 @@
       </interrupt>
     </peripheral>
   </peripherals>
-  <vendorExtensions>
-    <msp430_svd>
-      <version>0.2.0</version>
-      <commit_hash>31091a0</commit_hash>
-    </msp430_svd>
-  </vendorExtensions>
 </device>
